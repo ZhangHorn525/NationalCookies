@@ -43,6 +43,22 @@ namespace NationalCookies
             services.AddTransient<ICookieService, CookieService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration["ConnectionStrings:CacheConnection"];
+            });
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration["ConnectionStrings:CacheConnection"];
+            });
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration["ConnectionStrings:CacheConnection"];
+            });
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration["ConnectionStrings:CacheConnection"];
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

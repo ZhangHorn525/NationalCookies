@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "redis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Cache/Redis/NationalShanghaiCookiesCache",
+      "type": "redis.azure",
+      "connectionId": "CacheConnection",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/skycitydatabase/databases/NationalCookies.Database",
+      "type": "mssql.azure",
+      "connectionId": "CookieDBConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
